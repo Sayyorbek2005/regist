@@ -1,20 +1,25 @@
 import express from "express";
-import fetch from "node-fetch";
 import cors from "cors";
 import dotenv from "dotenv";
+import fetch from "node-fetch";
+
 
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// 1️⃣ JSON body parser
 app.use(express.json());
+
+// 2️⃣ CORS middleware – shu yerga yozamiz
+app.use(cors()); // <<< Mana shu 3️⃣
 
 // Bot token va chat_id
 const TOKEN = process.env.TELEGRAM_TOKEN;
 const CHAT_ID = process.env.CHAT_ID;
 const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-// Ma’lumot qabul qilish va botga yuborish
+// POST endpoint
 app.post("/send", async (req, res) => {
   const { name, phone, course } = req.body;
 
@@ -47,6 +52,4 @@ app.post("/send", async (req, res) => {
 });
 
 const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`✅ Server ${PORT} portda ishlayapti...`);
-});
+app.listen(PORT, () => console.log(`✅ Server ${PORT} portda ishlayapti...`));

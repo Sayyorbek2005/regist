@@ -2,8 +2,15 @@ import React, { useState } from "react";
 import { Form, Input, Button, Select, Card, message } from "antd";
 import "./App.css";
 
-// Rasmlar (hozircha hammasi bitta rasm)
-import imgDefault from "./assets/dadfg.png";
+// Kurs rasmlari import
+import computerImg from "./assets/8u88.png";
+import graphicImg from "./assets/img_one.jpeg";
+import smmImg from "./assets/img-two.webp";
+import foundationImg from "./assets/img_three.jpg";
+import frontendImg from "./assets/dadfg.png";
+import backendImg from "./assets/images.jpeg";
+import roboticsImg from "./assets/IMG-Header.jpg";
+import roboticsProImg from "./assets/komp.png";
 
 const { Option } = Select;
 
@@ -11,34 +18,32 @@ function App() {
   const [form] = Form.useForm();
   const [selectedCourse, setSelectedCourse] = useState("computer");
 
-  // Kurs rasmlari
+  // Kurs rasmlari mapping
   const courseImages = {
-    computer: imgDefault,
-    graphic: imgDefault,
-    smm: imgDefault,
-    foundation: imgDefault,
-    frontend: imgDefault,
-    backend: imgDefault,
-    robotics: imgDefault,
-    "robotics-pro": imgDefault,
-  };
+  computer: computerImg,
+  graphic: graphicImg,
+  smm: smmImg,
+  foundation: foundationImg,
+  frontend: frontendImg,
+  backend: backendImg,
+  robotics: roboticsImg,
+  "robotics-pro": roboticsProImg,
+};
+
 
   const onFinish = async (values) => {
     try {
-      const res = await fetch("http://localhost:5000/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
+     const res = await fetch("http://localhost:5000/send", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(values),
+});
 
-      const data = await res.json();
+const data = await res.json();
 
       if (data.success) {
         message.success("Ma'lumot yuborildi ✅");
-
-        // inputlarni tozalash
         form.resetFields();
-        // rasmni default holatga qaytarish
         setSelectedCourse("computer");
       } else {
         message.error("Xatolik yuz berdi ❌");
