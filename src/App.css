@@ -178,3 +178,7 @@
     padding: 0px;
     border-radius: 0px 0px 0px 0px;
 }
+:where(.css-xepvsj).ant-form-item .ant-form-item-explain-error:last-child {
+    color: #ff4d4f;
+    display: none;
+}
