@@ -76,7 +76,7 @@ const data = await res.json();
         >
           {/* Ism */}
           <Form.Item
-            label="Ism"
+            label="Ismingizni kiriting"
             name="name"
             rules={[{ required: true, message: "Iltimos, ismingizni kiriting!" }]}
           >
