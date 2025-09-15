@@ -120,6 +120,15 @@
 :where(.css-dev-only-do-not-override-xepvsj).ant-form-item .ant-form-item-label >label.ant-form-item-required::before {
   display: none;
 }
+:where(.css-xepvsj).ant-form-item .ant-form-item-label >label.ant-form-item-required::before {
+    /* display: inline-block; */
+    margin-inline-end: 4px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "";
+}
 
 
 /* ? error */
@@ -136,4 +145,21 @@
     padding: 0px 15px;
     border-radius: 5px;
     margin-top: 50px;
+}
+
+:where(.css-xepvsj).ant-btn {
+    font-size: 20px;
+    height: 45px;
+    padding: 0px 15px;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+
+/* ? select icon */
+:where(.css-xepvsj).ant-select .ant-select-arrow {
+   
+    margin-top: 5px;
+    font-size: 18px;
+   
 }
