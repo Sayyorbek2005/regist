@@ -65,9 +65,9 @@ const data = await res.json();
           />
         }
       >
-        <h2>
+        <h3 className="title">
          Innovatsiya va texnologiya olamida buyuklardan biri bo'lishga IT TAT sizga ko'makdosh
-        </h2>
+        </h3>
         <Form
           form={form}
           layout="vertical"

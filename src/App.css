@@ -32,6 +32,9 @@
   /* margin-left: 23%; */
   
 }
+.title{
+  color: #0958d9;
+}
 
 
 :where(.css-dev-only-do-not-override-xepvsj).ant-card .ant-card-cover >* {
