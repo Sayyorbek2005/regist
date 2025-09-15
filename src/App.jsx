@@ -65,9 +65,9 @@ const data = await res.json();
           />
         }
       >
-        <h1>
+        <h2>
           salom Lorem ipsum dolor sit amet.
-        </h1>
+        </h2>
         <Form
           form={form}
           layout="vertical"

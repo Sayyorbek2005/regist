@@ -41,7 +41,7 @@
 }
 
 .form-content {
-  padding: 20px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 :where(.css-dev-only-do-not-override-xepvsj).ant-card .ant-card-body {
