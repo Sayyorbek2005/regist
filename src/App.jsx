@@ -53,9 +53,8 @@ const data = await res.json();
       message.error("Server bilan aloqa yo'q ❌");
     }
   };
-
+  
   return (
-    <div className="form-wrapper">
       <Card
         className="form-card"
         cover={
@@ -122,7 +121,6 @@ const data = await res.json();
           </Form.Item>
         </Form>
       </Card>
-    </div>
   );
 }
 
