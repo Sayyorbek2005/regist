@@ -156,6 +156,7 @@
     padding: 0px 15px;
     border-radius: 5px;
     margin-top: 50px;
+    color: white;
 }
 
 
@@ -183,4 +184,17 @@
 :where(.css-xepvsj).ant-form-item .ant-form-item-explain-error:last-child{
     color: #ff4d4f;
     display: none;
+}
+
+:where(.css-xepvsj).ant-form-item .ant-form-item-additional {
+    /* display: flex
+; */
+    /* flex-direction: column; */
+    display: none;
+}
+
+
+:where(.css-xepvsj).ant-row {
+
+    padding: 10px 0px;
 }

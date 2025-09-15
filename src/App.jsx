@@ -116,7 +116,7 @@ const data = await res.json();
           {/* Submit tugmasi */}
           <Form.Item>
             <Button type="primary" htmlType="submit" block>
-              Jo‘natish
+              yuborish
             </Button>
           </Form.Item>
         </Form>
