@@ -66,7 +66,7 @@ const data = await res.json();
         }
       >
         <h2>
-          salom Lorem ipsum dolor sit amet.
+         Innovatsiya va texnologiya olamida buyuklardan biri bo'lishga IT TAT sizga ko'makdosh
         </h2>
         <Form
           form={form}
