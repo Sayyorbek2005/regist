@@ -32,7 +32,7 @@
 }
 
 :where(.css-dev-only-do-not-override-xepvsj).ant-card .ant-card-cover >* {
-  
+  margin-top: 20px;
   width: 200px;
   height: 200px;
 }
@@ -135,5 +135,5 @@
     height: 45px;
     padding: 0px 15px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
