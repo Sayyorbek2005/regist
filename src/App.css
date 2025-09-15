@@ -187,11 +187,11 @@
 }
 
 
-
-/* :where(.css-xepvsj).ant-row {
-  
-  padding: 10px 0px;
-} */
 :where(.css-xepvsj).ant-form-item .ant-form-item-additional {
     display: none;
 }
+
+    :where(.css-xepvsj).ant-form:not(.ant-form-inline) .ant-form-item {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
