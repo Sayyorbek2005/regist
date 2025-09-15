@@ -32,13 +32,6 @@
 }
 
 
-:where(.css-xepvsj).ant-card .ant-card-cover >* {
-    display: block;
-    width: 200px;
-    height: 200px;
-    border-radius: 5px 5px 5p 5px;
-}
-
 :where(.css-dev-only-do-not-override-xepvsj).ant-card .ant-card-cover >* {
   margin-top: 20px;
   width: 200px;
@@ -72,7 +65,7 @@
   font-size: 50px;
 }
 :where(.css-dev-only-do-not-override-xepvsj).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .ant-btn {
@@ -119,9 +112,9 @@
 }
 /* :where(.css-dev-only-do-not-override-xepvsj).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
   margin-bottom: 20px;
-} */
+  } */
 
-:where(.css-dev-only-do-not-override-xepvsj).ant-form-item .ant-form-item-label >label{
+  :where(.css-dev-only-do-not-override-xepvsj).ant-form-item .ant-form-item-label >label{
   font-size: 18px;
 }
 
@@ -142,7 +135,7 @@
 /* ? error */
 :where(.css-dev-only-do-not-override-xepvsj).ant-form-item .ant-form-item-explain-error {
   font-size: 11px;
-
+  
 }
 
 
@@ -169,6 +162,19 @@
    
     margin-top: 5px !important;
     font-size: 18px !important;
-   
+    
 }
 
+
+:where(.css-xepvsj).ant-card .ant-card-cover >* {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px 5px 5p 5px;
+}
+
+
+:where(.css-xepvsj).ant-card .ant-card-body {
+    padding: 0px;
+    border-radius: 0px 0px 0px 0px;
+}
