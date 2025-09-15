@@ -188,10 +188,10 @@
 
 
 
-:where(.css-xepvsj).ant-row {
+/* :where(.css-xepvsj).ant-row {
   
   padding: 10px 0px;
-}
+} */
 :where(.css-xepvsj).ant-form-item .ant-form-item-additional {
     display: none;
 }
