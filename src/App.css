@@ -31,6 +31,14 @@
   
 }
 
+
+:where(.css-xepvsj).ant-card .ant-card-cover >* {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px 5px 5p 5px;
+}
+
 :where(.css-dev-only-do-not-override-xepvsj).ant-card .ant-card-cover >* {
   margin-top: 20px;
   width: 200px;
@@ -127,7 +135,7 @@
     font-size: 14px;
     font-family: SimSun, sans-serif;
     line-height: 1;
-    content: "";
+    content: "" !important;
 }
 
 
@@ -159,7 +167,8 @@
 /* ? select icon */
 :where(.css-xepvsj).ant-select .ant-select-arrow {
    
-    margin-top: 5px;
-    font-size: 18px;
+    margin-top: 5px !important;
+    font-size: 18px !important;
    
 }
+
