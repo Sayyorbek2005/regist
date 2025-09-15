@@ -1,16 +1,21 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .form-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: #f0f2f5;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .form-card {
   width: 100%;
   max-width: 600px;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
@@ -19,6 +24,7 @@
   justify-content: center;
 }
 .form-image {
+  
   object-fit: cover;  
   /* margin: 40px 0px 20px 0px; */
   /* margin-left: 23%; */
@@ -27,8 +33,8 @@
 
 :where(.css-dev-only-do-not-override-xepvsj).ant-card .ant-card-cover >* {
   
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 .form-content {
@@ -39,6 +45,9 @@
  padding: 0px 20px; 
 }
 
+:where(.css-dev-only-do-not-override-xepvsj).ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+  font-size: 20px; /* 50px => 20px */
+}
 
 
 .ant-form-item-label > label {
@@ -48,10 +57,83 @@
 
 .ant-input,
 .ant-select-selector {
-  border-radius: 8px !important;
+  border-radius: 5px !important;
+  font-size: 20px;
+}
+:where(.css-dev-only-do-not-override-xepvsj).ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+  font-size: 50px;
+}
+:where(.css-dev-only-do-not-override-xepvsj).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+    font-size: 20px;
 }
 
 .ant-btn {
-  border-radius: 8px;
+  border-radius: 5px;
   font-weight: 600;
+
+}
+
+
+/* /?  */
+
+
+
+
+/* Input */
+.ant-input {
+  height: 50px !important;
+  font-size: 20px !important;
+  border-radius: 6px;
+  padding: 0 12px;
+}
+
+/* Select */
+.ant-select-selector {
+  height: 50px !important;
+  font-size: 20px !important;
+  border-radius: 6px !important;
+  display: flex;
+  align-items: center;
+  padding: 0 12px !important;
+}
+
+/* Select ichidagi tanlangan qiymat */
+.ant-select-selection-item {
+  font-size: 20px !important;
+  line-height: 50px !important;
+}
+
+
+
+:where(.css-dev-only-do-not-override-xepvsj).ant-select .ant-select-arrow {
+    margin-top: 5px;
+    font-size: 20px;
+}
+/* :where(.css-dev-only-do-not-override-xepvsj).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+  margin-bottom: 20px;
+} */
+
+:where(.css-dev-only-do-not-override-xepvsj).ant-form-item .ant-form-item-label >label{
+  font-size: 18px;
+}
+
+:where(.css-dev-only-do-not-override-xepvsj).ant-form-item .ant-form-item-label >label.ant-form-item-required::before {
+  display: none;
+}
+
+
+/* ? error */
+:where(.css-dev-only-do-not-override-xepvsj).ant-form-item .ant-form-item-explain-error {
+  font-size: 11px;
+
+}
+
+
+/* ? button */
+:where(.css-dev-only-do-not-override-xepvsj).ant-btn {
+    font-size: 20px;
+    height: 45px;
+    padding: 0px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
 }

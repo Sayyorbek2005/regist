@@ -78,7 +78,7 @@ const data = await res.json();
             name="name"
             rules={[{ required: true, message: "Iltimos, ismingizni kiriting!" }]}
           >
-            <Input placeholder="Ismingizni kiriting" />
+            <Input placeholder="Muhammad" />
           </Form.Item>
 
           {/* Telefon raqam */}
@@ -103,14 +103,14 @@ const data = await res.json();
               placeholder="Kursni tanlang"
               onChange={(value) => setSelectedCourse(value)}
             >
-              <Option value="computer">Kompyuter Savodxonligi</Option>
-              <Option value="graphic">Grafik Dizayn</Option>
-              <Option value="smm">SMM</Option>
-              <Option value="foundation">Foundation</Option>
-              <Option value="frontend">Frontend</Option>
-              <Option value="backend">Backend</Option>
-              <Option value="robotics">Robototexnika</Option>
-              <Option value="robotics-pro">Robototexnika Pro</Option>
+              <Option style={{fontSize: "20px"}} value="computer">Kompyuter Savodxonligi</Option>
+              <Option style={{fontSize: "20px"}} value="graphic">Grafik Dizayn</Option>
+              <Option style={{fontSize: "20px"}} value="smm">SMM</Option>
+              <Option style={{fontSize: "20px"}} value="foundation">Foundation</Option>
+              <Option style={{fontSize: "20px"}} value="frontend">Frontend</Option>
+              <Option style={{fontSize: "20px"}} value="backend">Backend</Option>
+              <Option style={{fontSize: "20px"}} value="robotics">Robototexnika</Option>
+              <Option style={{fontSize: "20px"}} value="robotics-pro">Robototexnika Pro</Option>
             </Select>
           </Form.Item>
 
