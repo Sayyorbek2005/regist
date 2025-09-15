@@ -186,15 +186,12 @@
     display: none;
 }
 
-:where(.css-xepvsj).ant-form-item .ant-form-item-additional {
-    /* display: flex
-; */
-    /* flex-direction: column; */
-    display: none;
-}
 
 
 :where(.css-xepvsj).ant-row {
-
-    padding: 10px 0px;
+  
+  padding: 10px 0px;
+}
+:where(.css-xepvsj).ant-form-item .ant-form-item-additional {
+    display: none;
 }
