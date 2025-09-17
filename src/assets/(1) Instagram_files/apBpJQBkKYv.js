@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("GetPreviewDimension",["Promise"],(function(a,b,c,d,e,f){"use strict";var g;function a(a){return new(g||(g=b("Promise")))(function(b){var c=new Image();c.onload=function(){return b({previewHeight:c.height,previewWidth:c.width})};c.onerror=function(){return b()};c.src=a})}function c(a){return new(g||(g=b("Promise")))(function(b){var c=document.createElement("video");c.onloadedmetadata=function(){return b({previewHeight:c.videoHeight,previewWidth:c.videoWidth})};c.onerror=function(){return b()};c.src=a})}f.getPreviewDimensions=a;f.getVideoPreviewDimensions=c}),66);

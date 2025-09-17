@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("usePolarisProfileInitialGridSize",["qex","react-compiler-runtime","useCheckPreconditionsForLOXProfileGridSizeQE"],(function(a,b,c,d,e,f,g){"use strict";var h=12;function a(a){var b=d("react-compiler-runtime").c(2);a=a===void 0?h:a;var e=c("useCheckPreconditionsForLOXProfileGridSizeQE")();if(!e)return a;if(b[0]!==a){e=(e=c("qex")._("3659"))!=null?e:a;b[0]=a;b[1]=e}else e=b[1];return e}g["default"]=a}),98);

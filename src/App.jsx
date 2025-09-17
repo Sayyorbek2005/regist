@@ -3,14 +3,12 @@ import { Form, Input, Button, Select, Card, message as antdMessage } from "antd"
 import "./App.css";
 
 // Kurs rasmlari import
-import computerImg from "./assets/8u88.png";
-import graphicImg from "./assets/img_one.jpeg";
-import smmImg from "./assets/img-two.webp";
-import foundationImg from "./assets/img_three.jpg";
-import frontendImg from "./assets/dadfg.png";
-import backendImg from "./assets/images.jpeg";
-import roboticsImg from "./assets/IMG-Header.jpg";
-import roboticsProImg from "./assets/komp.png";
+import dasturlashImg from "./assets/dasturlash.png";
+import kompiuterSavotxonlik from "./assets/komp.png";
+import smm from "./assets/smm.png";
+import roboticsImg from "./assets/robo.jpg";
+import roboticsProImg from "./assets/robo.jpg";
+import graphic from "./assets/grapicdesign.jpg"
 
 const { Option } = Select;
 
@@ -20,12 +18,10 @@ function App() {
 
   // Kurs rasmlari mapping
   const courseImages = {
-    computer: computerImg,
-    graphic: graphicImg,
-    smm: smmImg,
-    foundation: foundationImg,
-    frontend: frontendImg,
-    backend: backendImg,
+    computer: kompiuterSavotxonlik,
+    graphic: graphic ,
+    smm: smm,
+   dasturlash:dasturlashImg,
     robotics: roboticsImg,
     "robotics-pro": roboticsProImg,
   };
@@ -35,7 +31,7 @@ function App() {
     const token = process.env.REACT_APP_TELEGRAM_TOKEN;
     const chatId = process.env.REACT_APP_CHAT_ID;
 
-    console.log(token)
+   
 
     const text = `
 👤 Ism: ${values.name}
@@ -123,9 +119,7 @@ function App() {
             <Option value="computer">Kompyuter Savodxonligi</Option>
             <Option value="graphic">Grafik Dizayn</Option>
             <Option value="smm">SMM</Option>
-            <Option value="foundation">Foundation</Option>
-            <Option value="frontend">Frontend</Option>
-            <Option value="backend">Backend</Option>
+            <Option value="dasturlash">Dasturlash</Option>
             <Option value="robotics">Robototexnika</Option>
             <Option value="robotics-pro">Robototexnika Pro</Option>
           </Select>
