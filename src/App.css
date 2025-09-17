@@ -40,7 +40,7 @@ body{
 .title{
   color: #0958d9;
   text-align: center;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
 }
 
@@ -158,7 +158,7 @@ body{
     height: 45px;
     padding: 0px 15px;
     border-radius: 5px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 :where(.css-xepvsj).ant-btn {
