@@ -14,7 +14,7 @@ import roboticsProImg from "./assets/komp.png";
 
 const { Option } = Select;
 
-function App({ TELEGRAM_TOKEN, CHAT_ID }) {
+function App() {
   const [selectedCourse, setSelectedCourse] = useState("computer");
   const [form] = Form.useForm();
 
@@ -32,8 +32,10 @@ function App({ TELEGRAM_TOKEN, CHAT_ID }) {
 
   // Form tugallanganda
   const onFinish = (values) => {
-    const token = '7671113831:AAFyVwfTJMw_6QAJAXB4o_zfzSO-iRnyxiI';
-    const chatId = '1980510562';
+    const token = process.env.REACT_APP_TELEGRAM_TOKEN;
+    const chatId = process.env.REACT_APP_CHAT_ID;
+
+    console.log(token)
 
     const text = `
 👤 Ism: ${values.name}
