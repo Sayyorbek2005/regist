@@ -8,7 +8,7 @@ import kompiuterSavotxonlik from "./assets/komp.png";
 import smm from "./assets/smm.png";
 import roboticsImg from "./assets/robo.jpg";
 import roboticsProImg from "./assets/robo.jpg";
-import graphic from "./assets/grapicdesign.jpg"
+import graphic from "./assets/grapicdesign.jpg";
 
 const { Option } = Select;
 
@@ -19,9 +19,9 @@ function App() {
   // Kurs rasmlari mapping
   const courseImages = {
     computer: kompiuterSavotxonlik,
-    graphic: graphic ,
+    graphic: graphic,
     smm: smm,
-   dasturlash:dasturlashImg,
+    dasturlash: dasturlashImg,
     robotics: roboticsImg,
     "robotics-pro": roboticsProImg,
   };
@@ -31,14 +31,14 @@ function App() {
     const token = process.env.REACT_APP_TELEGRAM_TOKEN;
     const chatId = process.env.REACT_APP_CHAT_ID;
 
-   
-
+    // Xabar matni
     const text = `
 👤 Ism: ${values.name}
 📞 Raqam: ${values.phone}
 📚 Kurs: ${values.course}
     `;
 
+    // API ga so‘rov
     fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: "POST",
       headers: {
@@ -47,16 +47,17 @@ function App() {
       body: JSON.stringify({
         chat_id: chatId,
         text,
-        parse_mode: "HTML",
       }),
     })
-      .then((res) => {
-        if (res.ok) {
+      .then((res) => res.json()) // JSON javobni o‘qiymiz
+      .then((data) => {
+        console.log("Telegram javobi:", data);
+        if (data.ok) {
           antdMessage.success("So'rov yuborildi ✅");
           form.resetFields();
           setSelectedCourse(values.course);
         } else {
-          antdMessage.error("Xatolik yuz berdi ❌");
+          antdMessage.error(`Xatolik ❌: ${data.description}`);
         }
       })
       .catch((err) => {
