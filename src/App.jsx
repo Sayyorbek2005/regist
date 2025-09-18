@@ -27,42 +27,44 @@ function App() {
   };
 
   // Form tugallanganda
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
     const token = process.env.REACT_APP_TELEGRAM_TOKEN;
     const chatId = process.env.REACT_APP_CHAT_ID;
 
-    // Xabar matni
+    console.log("TOKEN:", token);
+    console.log("CHAT_ID:", chatId);
+
     const text = `
 👤 Ism: ${values.name}
 📞 Raqam: ${values.phone}
 📚 Kurs: ${values.course}
     `;
 
-    // API ga so‘rov
-    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text,
-      }),
-    })
-      .then((res) => res.json()) // JSON javobni o‘qiymiz
-      .then((data) => {
-        console.log("Telegram javobi:", data);
-        if (data.ok) {
-          antdMessage.success("So'rov yuborildi ✅");
-          form.resetFields();
-          setSelectedCourse(values.course);
-        } else {
-          antdMessage.error(`Xatolik ❌: ${data.description}`);
-        }
-      })
-      .catch((err) => {
-        antdMessage.error(`Tarmoq xatosi ❌: ${err}`);
+    try {
+      const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text,
+          parse_mode: "HTML",
+        }),
       });
+
+      const data = await res.json();
+      console.log("Telegram javobi:", data);
+
+      if (data.ok) {
+        antdMessage.success("So'rov yuborildi ✅");
+        form.resetFields();
+        setSelectedCourse(values.course);
+      } else {
+        antdMessage.error("Telegram xatosi ❌: " + data.description);
+      }
+    } catch (err) {
+      console.error("Tarmoq xatosi:", err);
+      antdMessage.error("Tarmoq xatosi ❌");
+    }
   };
 
   return (
